@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets_frontend/assets'
+import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
     <div className='flex flex-wrap justify-between items-center m-auto my-10 bg-primary text-white ' style={{borderRadius:"1rem"}}>
@@ -10,9 +11,11 @@ const Hero = () => {
                 <p className='text-sm'>Simply browse through our extensive list of trusted doctors,
                 schedule your appointment hassle-free.</p>
               </p>
-              <button className="rounded-md bg-white  p-4 border border-transparent text-center text-sm text-primary transition-all shadow-md hover:shadow-lg  flex items-center" type="button">
+        <Link to='/doctors'>
+        <button className="rounded-md bg-white  p-4 border border-transparent text-center text-sm text-primary transition-all shadow-md hover:shadow-lg  flex items-center" type="button">
                 Book Appointment<span className='px-2'><img src={assets.arrow_icon} alt="" /></span>
                 </button>
+        </Link>
           </div>
           <div className='right p-0 md:w-1/2'>
               <img src={assets.header_img} className=' bottom-0' alt="" />

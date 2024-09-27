@@ -7,6 +7,7 @@ import DoctorDetails from "./components/DoctorDetails/DoctorDetails"
 import DoctorsListing from "./components/DoctorsListing/DoctorsListing"
 import Contact from "./components/Contact/Contact"
 import Invalid from "./components/InvalidURL/Invalid"
+import Signup from "./components/Signup/Signup"
 function App() {
 
   return (
@@ -17,9 +18,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
           <Route path='about' element={<About />} />
           <Route path='doctor/:id' element={<DoctorDetails/>} />
-            <Route path='doctors' element={<DoctorsListing />} />
             <Route path='contact' element={<Contact />} />
-          <Route path='doctors-list' element={<DoctorsListing />} />
+          <Route path='sign-up' element={<Signup />} />
+          <Route path='doctors' element={<DoctorsListing />} />
           <Route path='*' element={<Invalid/>} />
         </Routes> 
         <Footer/>

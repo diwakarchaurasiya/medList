@@ -15,17 +15,17 @@ const Navbar = () => {
           <li>
             <Link to='/'>Home</Link>
             <hr/>
-          </li>
+            </li>
+            <li>
+            <Link to='/doctors'>ALL DOCTORS</Link>
+            <hr/>
+            </li>
           <li>
             <Link to='/about'>About</Link>
             <hr/>
           </li>
             <li>
             <Link to='/contact'>contact</Link>
-            <hr/>
-            </li>
-            <li>
-            <Link to='/address'>Address</Link>
             <hr/>
             </li>
               </ul>
@@ -35,7 +35,8 @@ const Navbar = () => {
           {isLogin ?
             <img src={assets.profile_pic} className='w-14 rounded-full cursor-pointer hover:ring-4 hover:ring-primary transition'/>
             :
-            <button type="button" className="outline-0  bg-primary focus:ring-4 focus:ring-green-300 font-medium rounded-md  px-5 py-2.5 ">Register</button>
+            <Link to='/sign-up'>
+            <button type="button" className="outline-0  bg-primary focus:ring-4 focus:ring-green-300 font-medium rounded-md  px-5 py-2.5 ">Register</button> </Link>
 
           }
         </div>
