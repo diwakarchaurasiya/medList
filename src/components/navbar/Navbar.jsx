@@ -8,7 +8,7 @@ const Navbar = () => {
     <div id='navbar'>
       <div className='flex direction-column  items-center justify-between text-sm  border-b border-primary'>
         <div className="logo">
-          <Link to='/' className='  flex items-center' ><img src={assets.logo} alt="logo" className='w-16 py-2' /><span className='text-4xl font-bold text-primary'>MedList</span></Link>
+          <Link to='/' onClick={()=>scrollTo(0,0)} className='  flex items-center' ><img src={assets.logo} alt="logo" className='w-16 py-2' /><span className='text-4xl font-bold text-primary'>MedList</span></Link>
         </div>
         <div className="links">
           <ul className='list-none hidden md:flex items-start gap-5 font-medium'>
@@ -17,7 +17,7 @@ const Navbar = () => {
             <hr/>
             </li>
             <li>
-            <Link to='/doctors'>ALL DOCTORS</Link>
+            <Link to='/doctors/all'>All Doctors</Link>
             <hr/>
             </li>
           <li>

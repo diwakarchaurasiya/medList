@@ -10,7 +10,7 @@ const Speciality = () => {
           <div className="iconsSearch flex flex-wrap justify-center items-center text-xs cursor-pointer my-10 gap-6">
               {specialityData.map((specs) => {
                   return(
-                      <Link to={"/doctors/" +specs.speciality} key={specs.speciality}>
+                    <Link to={"/doctors/"+ specs.speciality} key={specs.speciality} onClick={()=>scrollTo(0,0)}>
                       <div className="card flex flex-col items-center hover:translate-y-[-10px] transition-all duration-500">
                       <img src={specs.image} className='w-16 sm:w-24 mb-2 ' alt="" /> 
                       <p className='text-sm'>{specs.speciality}</p>
