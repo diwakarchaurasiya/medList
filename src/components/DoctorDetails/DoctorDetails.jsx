@@ -3,6 +3,8 @@ import { useParams,Link } from 'react-router-dom';
 import { doctors } from '../../assets/assets_frontend/assets';
 import { assets } from './../../assets/assets_frontend/assets'
 import Appointment from '../Appointment';
+import DocsCard from '../docsCard/docsCard';
+import Recommendation from './Recommendation';
 
 const DoctorDetails = () => {
   const { docName } = useParams();
@@ -14,9 +16,8 @@ const DoctorDetails = () => {
   useEffect(() => {
     fetchDoc()
   }, [docName])
-  console.log(docInfo)
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="mx-auto p-6">
       {/* Container for image and info */}
       <div className="flex flex-col md:flex-row items-center md:items-start">
         {/* Profile Picture */}
@@ -41,11 +42,11 @@ const DoctorDetails = () => {
           <div className="flex flex-col md:flex-row mt-4 text-sm">
             <div className="flex items-center">
               <span role="img" aria-label="phone" className="mr-2">📞</span>
-              <p>24/7 Support: +1 (487) 654-8741</p>
+              <p>24/7 Support: +1 91654-8741</p>
             </div>
             <div className="flex items-center mt-2 md:mt-0 md:ml-8">
               <span role="img" aria-label="email" className="mr-2">✉️</span>
-              <p>info@michael.com</p>
+              <p>diwakarbmj1212@gmail.com</p>
             </div>
           </div>
           
@@ -76,6 +77,9 @@ const DoctorDetails = () => {
             <p className="mt-2">Appointment Fees</p>
           </div>
         </div>
+      </div>
+      <div className="recommendedDoctors  w-full flex flex-wrap gap-8 items-center  px-3 sm:px-0 my-10 text-center">
+        <Recommendation speciality = {docInfo.speciality}/>
       </div>
     </div>
 

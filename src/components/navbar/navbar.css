@@ -1,11 +1,4 @@
 #navbar hr{
-    width: 90%;
-    height: 4px;
-    margin: auto;
-    outline: none;
-    border-radius: 5px;
-    background: #66B406;
-    border: none;
     display:none;
 }
 #navbar li{
@@ -14,4 +7,8 @@
 #navbar button {
     font-size: 18px !important;
     color: white !important;
+}
+#navbar li:hover{
+    color: #66B406;
+    transition: .2s;
 }

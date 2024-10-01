@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
+import {  toast } from 'react-toastify';
 const Appointment = ({setShowAppointment}) => {
   // Define state for selected day and time
+  const notify = () => toast.success("Appointment Booked ");
   const [selectedDay, setSelectedDay] = useState(0);
   const [selectedTime, setSelectedTime] = useState("");
 
@@ -35,7 +36,7 @@ const Appointment = ({setShowAppointment}) => {
     setSelectedTime(time);
     };
     const bookingHandle = () => {
-        alert(`your slot is booked on  ${days[selectedDay].day} date is ${days[selectedDay].date} at ${selectedTime} `)
+        notify();
         setShowAppointment(false);
     }
 
@@ -78,11 +79,11 @@ const Appointment = ({setShowAppointment}) => {
 
       {/* Book Appointment Button */}
       <button
-        className="md:w-1/2 w-full bg-primary text-white py-3 rounded-lg text-center font-semibold hover:bg-primary transition-colors duration-100"
+        className="md:w-1/2 w-full bg-primary text-white py-3 rounded-lg text-center font-semibold hover:bg-primary transition-colors duration-100 disabled:bg-[#91ff01ae]"
         disabled={!selectedTime} onClick={bookingHandle}
       >
         {selectedTime ? `Book appointment at ${selectedTime}` : "Book an appointment"}
-      </button>
+        </button>
     </div>
   );
 };

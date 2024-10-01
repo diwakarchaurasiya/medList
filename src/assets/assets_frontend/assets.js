@@ -36,9 +36,11 @@ import General_physician from './General_physician.svg'
 import Gynecologist from './Gynecologist.svg'
 import Neurologist from './Neurologist.svg'
 import Pediatricians from './Pediatricians.svg'
+import sad404 from './sad404.svg'
 
 
 export const assets = {
+    sad404,
     appointment_img,
     header_img,
     group_profiles,
