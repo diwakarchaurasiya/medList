@@ -35,7 +35,7 @@ const Navbar = () => {
               <img src={assets.profile_pic} className='w-14 rounded-md cursor-pointer hover:ring-4 hover:ring-primary duration-200 hidden md:block' />
               <img src={assets.dropdown_icon} alt="" />
             </div>
-              <div className="float_card absolute top-0 py-24 pr-10 md:pr-24 right-10 text-base font-medium text-[#666666] z-20  hidden group-hover:block duration-200">
+              <div className="float_card absolute top-0 py-24 pr-10 md:pr-12 right-10 text-base font-medium text-[#666666] z-20  hidden group-hover:block duration-200">
                 <div className='min-w-48 bg-[#eeefef] rounded-md border border-primary flex flex-col gap-4 p-4 text-[gray]'>
                   <ul>
                   <li>
